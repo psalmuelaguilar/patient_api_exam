@@ -14,6 +14,9 @@ gem 'puma', '~> 3.7'
 # gem 'active_model_serializers', '~> 0.10.0'
 gem 'kaminari'
 
+gem 'sorcery'
+gem 'jwt'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'byebug'
