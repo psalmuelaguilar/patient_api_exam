@@ -8,7 +8,7 @@ end
 gem 'rails', '~> 5.1.4'
 # gem 'pg', '~> 0.18'
 gem 'mongoid', '~> 6.1.0'
-gem 'mongoid-serializer'
+# gem 'mongoid-serializer'
 gem 'bson_ext'
 gem 'puma', '~> 3.7'
 # gem 'active_model_serializers', '~> 0.10.0'

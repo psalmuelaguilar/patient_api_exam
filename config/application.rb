@@ -22,5 +22,7 @@ module PatientApi
     end
 
     Mongoid.load!(Rails.root.join("config/mongoid.yml"))
+
+    config.autoload_paths += %W(#{config.root}/app/services #{config.root}/app/serializer)
   end
 end

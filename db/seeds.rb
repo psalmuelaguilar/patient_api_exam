@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Patient.destroy_all
+Diagnosis.destroy_all
+DiagnosisDetail.destroy_all
+
 patient = Patient.create(patient_serial: '123456789', name: 'Test')
 
 urn = Diagnosis.create(name: 'Urinalysis', patient_id: patient.id)
@@ -13,12 +17,6 @@ urn = Diagnosis.create(name: 'Urinalysis', patient_id: patient.id)
 cbc =  Diagnosis.create(name: 'Complete Blood Count', patient_id: patient.id)
 
 
-cbc_details = cbc.create_diagnosis_detail(
-  date: "2014-11-21",
-  location: "MyHealth Clinic",
-  physician: "Dr. Dexter Morgan",
-  finding: analysis
-)
 
 analysis = {
 	"Colour": {
@@ -73,6 +71,14 @@ analysis = {
 		"value": "None",
 	}
 }
+
+
+cbc_details = cbc.create_diagnosis_detail(
+  date: "2014-11-21",
+  location: "MyHealth Clinic",
+  physician: "Dr. Dexter Morgan",
+  finding: analysis
+)
 
 urn.create_diagnosis_detail(
   date: "2014-11-21",
