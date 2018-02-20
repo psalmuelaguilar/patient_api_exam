@@ -5,6 +5,7 @@ class PatientSerializer
 
   def as_json(*)
     data = {
+      id: @patient.id,
       patient_serial: @patient.patient_serial.to_s,
       name: @patient.name,
       diagnoses: build_diagnoses
